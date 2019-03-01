@@ -22,29 +22,32 @@
             <nav id="nav-main">
                 <ul>
                     <li>
-                        <a routerLink="/Home" (click)="getActiveTab('home')" [class.active]="activetab === 'home'">Home</a>
+                        <a routerLink="/Home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
                     </li>
                     <li>
-                        <a routerLink="/About" (click)="getActiveTab('about')" [class.active]="activetab === 'about'">About</a>
+                        <a routerLink="/About" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">About</a>
                     </li>
                     <li>
-                        <a routerLink="/Gallery" (click)="getActiveTab('gallery')" [class.active]="activetab === 'gallery'">Gallery</a>
+                        <a routerLink="/Gallery" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Gallery</a>
                     </li>
                     <li>
-                        <a routerLink="/Section" (click)="getActiveTab('section')" [class.active]="activetab === 'section'">Services</a>
+                        <a routerLink="/Section" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Services</a>
                     </li>
                     <li>
-                        <a routerLink="/Testimonials" (click)="getActiveTab('testimonials')" [class.active]="activetab === 'testimonials'">Testimonials</a>
+                        <a routerLink="/Testimonials" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Testimonials</a>
                     </li>
                     <li>
-                        <a routerLink="/Clients" (click)="getActiveTab('clients')" [class.active]="activetab === 'clients'">Clients</a>
+                        <a routerLink="/Clients" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Clients</a>
                     </li>
                     <li>
-                        <a routerLink="/Pricing" (click)="getActiveTab('pricing')" [class.active]="activetab === 'pricing'">Pricing</a>
+                        <a routerLink="/Pricing" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Pricing</a>
                     </li>
                     <li>
-                        <a routerLink="/Blog" (click)="getActiveTab('blog')" [class.active]="activetab === 'blog'">Blog</a>
+                        <a routerLink="/Blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Blog</a>
                     </li>
+                    <li>
+                      <a (click)= "logout()">Logout</a>
+                  </li>
                 </ul>
               </nav>
               <!--End of Main Navigation-->

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common'
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,14 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  activetab = 'home';
-  constructor() { }
+  activetab: string;
+  isloggedIn: boolean;
+
+  constructor(private location: Location, private auth: AuthenticationService) { }
 
   ngOnInit() {
+    this.activetab = this.location.path();
+    console.log('from $(this.activetab)');
   }
 
   getActiveTab(tabname: string) {
     this.activetab = tabname;
+    console.log(tabname);
+  }
+
+  logout() {
+    this.auth.logout();
   }
 
 }

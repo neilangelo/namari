@@ -49,12 +49,12 @@ export class AuthenticationService {
     );
   }
 
-  // logout() {
-  //   if (localStorage.getItem('currentUser')) {
-  //     localStorage.removeItem('currentUser');
-  //     this.router.navigate(['/home']);
-  //   }
-  // }
+  logout() {
+    if (localStorage.getItem('currentUser')) {
+      localStorage.removeItem('currentUser');
+      this.router.navigate(['/home']);
+    }
+  }
 
   // isloggedIn() {
   //   if (localStorage.getItem('currentUser')) {
